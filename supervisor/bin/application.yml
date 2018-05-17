@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: eureka
+
+info:
+  name: ${spring.application.name}
+
+server:
+  port: 8001
+
+endpoints:
+  shutdown:
+    sensitive: false
+    enabled: true
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

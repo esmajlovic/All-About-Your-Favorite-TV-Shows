@@ -1,0 +1,111 @@
+body{
+	background-color: #00000;
+	width: 100%;
+	background-image: url("/css/images/pozadina.jpg");
+	}
+#baner 
+{
+	width: 80%;
+	margin: auto;
+	background-image: url("/css/images/banerr.png");
+    background-repeat: no-repeat;
+	height: 100px;
+}
+#cont{
+	width: 80%;
+	margin: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+}
+#show {
+	width: 33%;
+
+}
+#naslov {
+	width: 100%;
+}
+
+#show img {
+	width: 80%;
+}
+#showone {
+	width: 98%;
+	display: block;
+}
+.pola {
+	width: 50%;
+	float: left;
+}
+#glumci {
+	width: 100%;
+}
+#naslov {
+	margin: auto;
+	width:80%;	
+}
+#sadrzajstranice {
+	width:100%;
+	background-color: #111;
+    color: #D0D0D0;	
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #2a2a2a;
+}
+.sve{
+    background-color: #111;
+    width:98%;
+    color: #D0D0D0;
+    
+	padding:10px;
+}
+
+#review {
+    background-color: #111;
+    width:98%;
+    padding:10px;
+    list-style-type: none;
+}
+.rating{
+    background: url("/css/images/review.png");
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    width: 5%;
+    padding: 10px;
+    color: #000;
+    float:right;
+}
+.avatar {
+    float:left;
+    width: 10%;
+}
+.reviewtext {
+    float:left;
+    width: 80%;
+    color: #D0D0D0;
+}
+#naslovreviews {
+	width: 95%;
+	float: left;
+}
+#menu {
+	background-color: #2a2a2a;
+}

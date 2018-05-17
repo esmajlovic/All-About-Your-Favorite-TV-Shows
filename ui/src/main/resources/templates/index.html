@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="tvShowDbApp" lang="en-US" >
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>All about your favorite TV shows</title>
+	<link rel="stylesheet" type="text/css" media="all" href="/css/appstyle.css"/>
+</head>
+<body>
+<div id="baner"></div>
+	<div id="cont">	
+	<ul id="menu">
+  		<li><a class="active" href="#/">Home</a></li>
+  		<li><a href="/info">About</a></li>
+  		<li><a href="/contact">Contact</a></li>
+	</ul>	
+	<div id="sadrzajstranice">
+	<div ng-view=""></div>
+					
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-resource.min.js"></script>
+	<script type="text/javascript" src="/js/angular-route.min.js"></script>
+	<script type="text/javascript" src="/js/app.js"></script>
+	<script type="text/ng-template" id="show-list.html">
+	<div class="sve">
+		<ul>
+			<li id="show" ng-repeat="show in shows">
+				<a href="#/show/{{show.id}}" title="{{show.name}}">
+					<img ng-src="/images/{{show.id}}-1.jpg" alt="{{show.name}}"/>
+				
+				<div id="naslov">{{show.name}}</div></a>
+			</li>
+		</ul>
+	</div>
+	</script>
+	<script type="text/ng-template" id="show.html">
+<div class="sve">
+<h1>{{show.name}}</h1>
+<div class="pola">	
+	<img src="/images/{{show.id}}-2.jpg" alt="Image Format" id="showone"/>
+</div>
+<div class="pola">
+	<h4>Seasons:</h4>{{show.seasons}}<br/>
+			
+	<h4>Actors:</h4>
+		<ul>
+			<li id="glumci" ng-repeat="actor in show.actors | orderBy:'name'">
+				<span>{{actor.name}}</span><span> ( {{actor.birthdate | date:'mediumDate'}} )</span>&nbsp;<img style="cursor: pointer;" src="/css/images/infooo.png" title="{{actor.bio}}"/><br/>
+			</li>
+		</ul>								
+		<p>{{show.description}}</p>
+</div>
+
+
+<hr/>				                           
+<h3>{{reviews.length}} REVIEW(S)</h3>
+<ul>                               
+	<li id="review" ng-repeat="review in reviews | orderBy:'rating'">
+    	<div class="rating">{{review.rating}}</div>                                     
+        <img alt="" src="/css/images/avatarr.png" class="avatar"/>
+        <div class="reviewtext"><b><span class="author">{{review.userName}}</span></b>
+		<p>{{review.review}}</p></div>
+	</li>
+</ul>
+
+<hr/>
+</div>                                     
+	</script>
+	</div></div>
+</body>
+</html>
